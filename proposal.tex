@@ -1,0 +1,108 @@
+\documentclass[10pt]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\begin{document}
+\author{Armon Shariati}
+\title{Dynamic Replanning Cues From Scene Parsing and Object Recognition}
+\date{}
+\maketitle
+
+Some mobile robots encounter more uncertainty in their environments than
+others.  Arguably, disaster relief robots operate in some of the most highly
+unpredictable environments imaginable. To date, most of the robotic systems
+that handle such scenarios are telerobotic. However, teaching people to control
+such systems, and relaying sufficient information to the operator to make
+intelligent decisions, are challenging problems. In addition, sensing
+technology and computer hardware continue to become more advanced and
+affordable. As a result, the prospects of developing autonomous agents as
+solutions have greatly improved over the past several years. The DARPA Robotics
+Challenge serves as primary evidence for this shift in research trends.
+
+In order to complete any task, the robot must have the intelligence to create a
+plan. These plans can be anything from the order in which a robotic arm must
+stack blocks, the configuration in which a set of modular robots must arrange
+themselves, or the necessary set of waypoints a robotic car must traverse in
+order to safely arrive at its destination. However, many of these planners
+operate within static environments, and often times make the assumption that
+obstacles are riged. Consider a situation where a building is collapsing and
+the robot is trying find humans in the wreckage. If the robot suddenly finds
+itself surrounded by rubble because of falling debris, then not only is its
+former plan invalid but conventional anytime planning algorithms would not be
+able to provide a solution. Dynamic replanning algorithms seek to address
+similar problems; they are able to quickly compute an optimal solution.
+Situations such as the one mentioned are complex planning problems.
+Furthermore, in such cases the agent may not have enough time to deliberate a
+solution using dynamic replanning alone. A lot of attention has recently been
+given to finding solutions to complex planning problems where environments are
+dynamic and time is a constraint \cite{likhachev}.
+
+While working at the GRASP Lab at the University of Pennsylvania as a summer
+REU student, one of my close friends on the program was working with a graduate
+student on this class of problem. Specifically, they were investigating the
+possibility of moving an obstacle in order to generate a new plan, after
+removing the assumption of static obstacles from their model. While they were
+more interested in the planning aspect to the problem, I was wondering how one
+could use more sophisticated machine perception techniques in order to detect
+whether or not an obstacle can be moved.
+
+Human beings have the remarkable ability of being able to see objects that they
+have never seen before and instantly know how they could potentially interact
+with them. This skill is exactly what allows humans to adapt to and manipulate
+their environment. Computer vision has come a long way, but is still far from
+solving this problem. However, recent advances in sensing technology such as
+RGBD sensors like the Microsoft Kinect, have allowed researchers to make
+significant progress addressing the problem in an indoor setting. Among these
+techniques include the use of scene parsing as a means for better object
+recognition. By segmenting the different components of a setting from an image,
+object recognition software can make better decisions when trying to classify
+potential candidates. New state of the art methods such as those seen in
+\cite{gupta}, have seen much success understanding indoor scenes and using
+scene categories for effective segmentation.
+
+I would like to investigate the use of these computer vision techniques as
+planning cues for a robot in a dynamic environment. I propose constructing a
+simple four wheeled robot with a simple manipulate, that can recognize mutable
+obstacles, performs any necessary manipulation tasks to modify its environment,
+and then efficiently reconstruct a plan. I would like to immerse myself within
+perception and planning literature equally in order to construct the best
+possible solution, which draws upon the state of the art in both subjects. The
+success of my project would likely contribute most to the study of planning
+algorithms. If engineers in this field find that there are effective vision
+tools that can provide more detailed information about their precarious
+environments, then perhaps more sophisticated planning algorithms can be
+developed that would be both fast, optimal, and applicable to dynamic
+environments with complex planning problems.
+
+Broader implications of my research include endangering fewer lives in the
+event of disasters. The use of such technology would mean that fewer responders
+would be needed to enter hazardous environments such as burning buildings,
+accident sites, and natural disaster zones. After events such as Fukushima and
+9-11, many lives were lost after the disaster as a result of people being
+exposed to hazardous material while trying to clear wreckage and find
+survivors, even though tasks such as sifting through rubble could be more
+efficiently performed by a machine. Ultimately, as the human population
+continues to grow exponentially and urban centers are growing more crowded,
+accidents are inevitable.  It is our responsibility as researchers to utilize
+the advancements in manufacturing and technology to engineer relevant solutions
+that find their way into the lives of people as quickly as possible.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{likhachev}
+  Maxim Likhachev, Dave Ferguson, Geoff Gordon, Anthony Stentz, and Sebastian Thrun,
+  \emph{Anytime Dynamic A*: An Anytime, Replanning Algorithm}.
+  ICAPS,
+  2005.
+
+\bibitem{gupta}
+  Saurabh Gupta, Pablo Arbelaez, Jitendra Malik,
+  \emph{Perceptual Organization and Recognition of Indoor Scenes from RGB-D Images}.
+  Computer Vision and Pattern Recognition,
+  2013.
+
+\end{thebibliography}
+
+
+
+
+\end{document}
