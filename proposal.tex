@@ -8,14 +8,12 @@
 
 Some mobile robots encounter more uncertainty in their environments than
 others.  Arguably, disaster relief robots operate in some of the most highly
-unpredictable environments imaginable. To date, most of the robotic systems
-that handle such scenarios are telerobotic. However, teaching people to control
-such systems and relaying sufficient information to the operator to make
-well-informed decisions, are challenging problems. In addition, sensing
-technology and computer hardware continue to become more advanced and
-affordable. As a result, the prospects of developing autonomous agents as
-solutions have greatly improved over the past several years. The DARPA Robotics
-Challenge serves as primary evidence for this shift in research trends.
+unpredictable environments imaginable. Most of the robotic systems that handle
+such scenarios are currently telerobotic. However, rising costs of training
+telerobotic operators, in tandem with recent advancements in computing,
+manufacturing, and sensing technology, have greatly improved the prospects of
+developing autonomous agents as viable solutions. The DARPA Robotics Challenge
+serves as primary evidence for this shift in research trends.
 
 In order to complete any task, the robot must have the intelligence to create a
 plan. These plans can be anything from the order in which a robotic arm must
@@ -39,27 +37,28 @@ While working at the GRASP Laboratory at the University of Pennsylvania as a
 summer REU student, one of my close friends in the program was working with a
 graduate student on this class of problem. Specifically, they were
 investigating the possibility of moving an obstacle in order to generate a new
-plan, after removing the assumption of static obstacles from their model. Whereas
-their research interests lay more in the planning aspect to the problem, I
-was curious as to how one could use more sophisticated perception tools 
-in order to detect potentially movable objects.
+plan after removing the assumption of static obstacles from their model.
+Whereas their research interests lay more in the planning aspect to the
+problem, I was curious as to how one could use more sophisticated perception
+tools in order to detect potentially movable objects.
 
 Human beings have the remarkable ability of being able to see objects that they
-have never seen before and instantly know how they could potentially interact
-with them. This skill is exactly what allows humans to adapt to and manipulate
-their environment. Computer vision has come a long way, but is still far from
-solving this problem. However, recent advances in sensing technology such as
-RGBD sensors like the Microsoft Kinect, have allowed researchers to make
-significant progress addressing the problem in an indoor setting. Identifying
-an object encompasses three major problems including segmentation, detection,
-and class recognition. Scene parsing is a newer technique, which aims to solve
-all three problems at once with a single process. By first segmenting out
-different elements of the scene, better decisions can be made when trying to
-detect and classify objects. New state of the art methods such as those seen in
-\cite{gupta}, have seen much success understanding indoor scenes and using
-scene categories for effective segmentation. I would like to investigate the
-use of these computer vision techniques as planning cues for a robot in a
-dynamic environment.
+have never encountered before and instantly know how they could potentially
+interact with them. This skill is exactly what allows humans to adapt to and
+manipulate their environment so effectively. Computer vision has come a long
+way, but is still far from solving this problem. However, affordable and modern
+sensing technology such as RGBD sensors like the Microsoft Kinect, have allowed
+researchers to make significant progress addressing the problem in an indoor
+setting.  Identifying an object encompasses three other major problems
+including segmentation, detection, and class recognition. Scene parsing is a
+newer technique, which aims to solve all three problems at once with a single
+process. By first segmenting out different structural elements of the image,
+scene parsing methods attempt to make better decisions when trying to detect
+and classify objects. New state of the art methods such as those seen in
+\cite{gupta}, have experienced much success in attempting to understand indoor
+scenes by using scene categories for effective segmentation. I would like to
+investigate the use of these computer vision techniques as planning cues for a
+robot in a dynamic environment.
 
 I propose the construction of a four wheeled robot with a simple manipulator.
 The robot would be equipped with an initial map of its environment, a means for
@@ -79,15 +78,15 @@ Broader implications of my research include endangering fewer lives in the
 event of disasters. The use of such technology would mean that fewer responders
 would be needed to enter hazardous environments such as burning buildings,
 accident sites, and natural disaster zones. During events such as Fukushima and
-9-11, many lives were lost in the immediate aftermath of the disaster, as a
-result of people being exposed to hazardous material while trying to clear
-wreckage and find survivors. Sifting through rubble and other hazardous
-material is a dangerous task, and can be done more efficiently and safely by a
-machine. Ultimately, as the human population continues to grow exponentially
-and urban centers are becoming denser, accidents are inevitable.  It is
-our responsibility as researchers to utilize the advancements in manufacturing
-and technology to engineer relevant solutions that find their way into the
-hands of people as quickly as possible.
+9-11, the lives of many volunteers and first responders were lost in the
+immediate aftermath of the disaster as a result of being exposed to hazardous
+material while trying to clear wreckage in order to find survivors. Sifting
+through rubble and other hazardous material is a dangerous task, and can be
+done more efficiently and safely by a machine. Ultimately, as the human
+population continues to grow exponentially and urban centers become more dense,
+accidents are inevitable. It is our responsibility as researchers to utilize
+all available advancements in technology to engineer relevant solutions that
+find their way into the hands of people as quickly as possible.
 
 
 \begin{thebibliography}{9}
