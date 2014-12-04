@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[left=1in, right=1in, top=0.4in, bottom=1in]{geometry}
+\usepackage[left=1in, right=1in, top=0.25in, bottom=1in]{geometry}
 \begin{document}
 \author{Armon Shariati}
 \title{}
@@ -102,21 +102,23 @@ more important than the successful project itself was learning to stay open
 minded when dealing with technologies I am unfamiliar with, and learning to
 quickly absorb whatever knowledge is necessary to complete a task.
 
-Finally, at the onset of my senior year, I have finally acquired the skills to
-spearhead a graduate-level research project, a project I longed to work on, our
-mapping tricycle. The tricycle system begins by taking a series of planar LIDAR
-scans. From the aggregated scans, we segment out pole-like landmarks such as
-street signs, lamp posts, and parking meters, and assign each landmark a GPS
-coordinate on a UTM plane.  The end result is a 2D map of landmarks, which an
-autonomous wheelchair can use to negotiate paths between locations of interest
-in urban settings. As it passes into my hands, the hardware is mostly complete
-alongside the device drivers. My task is to write the necessary software for
-robust pose estimation, pole segmentation, and finally, map generation via
-SLAM. The work I have completed as of December 2014 has even been
-incorporated as a section in our latest aforementioned journal submission. I
-am beginning to comprehend what it means to be a researcher. With no more than
-a few suggestions in passing from my advisor or graduate mentor as I incur some
-of the largest challenges, I am responsible for thinking of my own creative
+At the onset of my senior year, I have finally acquired the skills to spearhead
+a graduate-level research project, the Lehigh Mapping Tricycle (LMT). The LMT
+project is motivated by the lack of means to consturct large-scale feature maps
+in outdoor urban environments required for our Smart Wheelchair System.  Data
+from the LMT's proprioceptive sensors including a GPS module, an IMU, and
+encoder, are fused together to generate an estimate of its position in 3D
+space. With 3D odometry in place, vertical LIDAR scans taken from either side
+of the vehicle are aggregated in order to create a 3D point cloud, from which
+pole-like features are extracted for mapping. Using variations of SLAM, the
+locations of poles are optimized over the path the robot has taken in order to
+generate a 2D map.  After inheriting the majority of the hardware, I wrote the
+software for robust pose estimation, pole segmentation, and map generation. The
+work I have completed as of December 2014 has even been incorporated as a
+section in our latest aforementioned journal submission. I am beginning to
+comprehend what it means to be a researcher. With no more than a few
+suggestions in passing from my advisor or graduate mentor as I incur some of
+the largest challenges, I am responsible for thinking of my own creative
 solutions. I independently devise experiments, and assess their merit.  Perhaps
 the most daunting challenge of all is finding the time  and energy to address
 the other aspects of my life as I constantly find myself saying, ``let me just
